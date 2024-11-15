@@ -13,3 +13,9 @@
 * Lag en brukerguide/læringsdokument + video til brukerne i bedriften dere angrep.  Hva bør de være obs på til neste gang de blir utsatt for phishing-angrep.  
 
 # Vår plan?
+* siden vi skal bruke = Finn.no
+
+### Hvorfor valgte vi dette? 
+* finn er en side du kommer menst sansynellig for at man svarer på en finn forespørsel på e-post
+* du kan også finne mye mer informasjon angående persjonen som selger på finn
+* du har også flere valg til valg av e-post til den rammede f.eks melding angående loggin på finn & visning av produkt på finn
