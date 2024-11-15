@@ -11,3 +11,5 @@
 
   Få tak i credentials til brukeren (bruk database el.) og session cookies som dere kan bruke for videre angrep 
 * Lag en brukerguide/læringsdokument + video til brukerne i bedriften dere angrep.  Hva bør de være obs på til neste gang de blir utsatt for phishing-angrep.  
+
+# Vår plan?
