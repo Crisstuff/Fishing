@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logg inn med Schibsted-kontoen din</title>
+    <meta name="description" content="Schibsted-konto (tid. SPiD) er en enkel og trygg innloggingsløsning som brukes av blant annet Finn, VG, E24, Aftenposten og Morgenlevering">
+    <style>
+        body {
+            background: #fafafa;
+        }
+
+        .absolute {
+            position: absolute;
+            margin: -50px -50px;
+            top: 50%;
+            left: 50%;
+        }
+
+        .spinner-background {
+            width: 84px;
+            height: 84px;
+        }
+
+        .spinner-background circle {
+            stroke: #c4dcf5;
+            stroke-width: 4;
+            fill: transparent;
+        }
+
+        .spinner {
+            width: 84px;
+            height: 84px;
+        }
+
+        .spinner circle {
+            stroke: #1d72db;
+            stroke-width: 5;
+            fill: transparent;
+            stroke-dasharray: 263.74;
+            transform-origin: 42px 42px 0;
+            animation: spinner 4s linear infinite;
+        }
+
+        @keyframes spinner {
+            0% {
+                stroke-dashoffset: 55.44;
+                transform: rotate(0deg);
+            }
+            50% {
+                stroke-dashoffset: 263.74;
+                transform: rotate(720deg);
+            }
+            100% {
+                transform: rotate(1080deg);
+                stroke-dashoffset: 55.44;
+            }
+        }
+    </style>
+    <link href="../../d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
+</head>
+
+<body>
+    <div id="id-web-ui">
+        <svg class="spinner-background absolute" x="0" y="0" viewBox="0 0 84 84">
+            <circle cx="42" cy="42" r="39.7"/>
+        </svg>
+        <svg class="spinner absolute" x="0" y="0" viewBox="0 0 84 84">
+            <circle cx="42" cy="42" r="39.7"/>
+        </svg>
+    </div>
+
+    <!--[if lte IE 8]>
+    <div class="old-browser">
+        Your browser is outdated
+    </div>
+    <![endif]-->
+
+    <noscript class="no-script">
+        JavaScript is required
+    </noscript>
+    <div id="bffData" style="display: none">
+        {&quot;client&quot;:{&quot;birthdayFormat&quot;:&quot;default&quot;,&quot;css&quot;:{&quot;background_color&quot;:&quot;#E9EFF5&quot;,&quot;color&quot;:&quot;&quot;},&quot;domain&quot;:&quot;https:&#x2F;&#x2F;www.finn.no&quot;,&quot;emailReceiptsEnabled&quot;:true,&quot;id&quot;:&quot;5087dc1b421c7a0b79000000&quot;,&quot;locale&quot;:&quot;nb_NO&quot;,&quot;logoUrl&quot;:&quot;&#x2F;&#x2F;d3iwtia3ndepsv.cloudfront.net&#x2F;clients&#x2F;images&#x2F;logos&#x2F;5087dc1b421c7a0b79000000_56e7c4e3c1c45.png&quot;,&quot;logoMarkUrl&quot;:&quot;&#x2F;&#x2F;d3iwtia3ndepsv.cloudfront.net&#x2F;clients&#x2F;images&#x2F;logos&#x2F;5087dc1b421c7a0b79000000_61fd0971ce63e.svg&quot;,&quot;company&quot;:&quot;marketplaces&quot;,&quot;merchantId&quot;:47003,&quot;merchantName&quot;:&quot;FINN.no
+        AS&quot;,&quot;merchantType&quot;:&quot;external&quot;,&quot;name&quot;:&quot;FINN.no&quot;,&quot;appType&quot;:&quot;web_client&quot;,&quot;pulseProviderId&quot;:&quot;sdrn:schibsted:client:finn&quot;,&quot;sessionServiceDomain&quot;:&quot;https:&#x2F;&#x2F;id.finn.no&quot;,&quot;teaser&quot;:{&quot;url&quot;:&quot;&#x2F;&#x2F;d3iwtia3ndepsv.cloudfront.net&#x2F;clients&#x2F;teasers&#x2F;5087dc1b421c7a0b79000000_5ba0d83047b55.html&quot;},&quot;terms&quot;:{&quot;clientTermsUrl&quot;:&quot;&#x2F;terms?client_id&#x3D;5087dc1b421c7a0b79000000&quot;},&quot;status&quot;:1,&quot;supportUrl&quot;:&quot;https:&#x2F;&#x2F;hjelpesenter.finn.no&#x2F;hc&#x2F;no&#x2F;articles&#x2F;303994-Åpningstider-og-telefonnummer&quot;,&quot;defaultClientId&quot;:&quot;4d06920474dea26227070000&quot;,&quot;uriScheme&quot;:&quot;&quot;},&quot;spidUrl&quot;:&quot;https:&#x2F;&#x2F;payment.schibsted.no&quot;,&quot;reCaptchaSiteKey&quot;:&quot;6Le5um4UAAAAABdQhjGRL1lLIVduoKSSuDCpggjg&quot;,&quot;defaultTermsAgreement&quot;:true,&quot;pulse&quot;:{&quot;enabled&quot;:true,&quot;providerId&quot;:&quot;sdrn:schibsted:client:finn&quot;,&quot;realm&quot;:&quot;spid.no&quot;,&quot;deployTag&quot;:&quot;schacc-v4.5.47&quot;,&quot;experiments&quot;:[],&quot;deployStage&quot;:&quot;pro&quot;},&quot;bff&quot;:{&quot;host&quot;:&quot;https:&#x2F;&#x2F;payment.schibsted.no&quot;,&quot;env&quot;:&quot;pro-no&quot;},&quot;initialState&quot;:{&quot;links&quot;:{&quot;self&quot;:{&quot;href&quot;:&quot;&#x2F;authn&#x2F;?client_sdrn&#x3D;sdrn%3Aspid.no%3Aclient%3A5087dc1b421c7a0b79000000&amp;client_id&#x3D;5087dc1b421c7a0b79000000&amp;one_step_login&#x3D;true&amp;teaser&#x3D;login-v1&amp;acr_values&#x3D;password&amp;nonce&#x3D;d34dc0b8-b955-4575-b278-004ef313d99d&amp;state&#x3D;cd47d3fb1eb95c634a45e5c83fd83eb5f6b83434c269bc97597aa087f54632015d9f0f2b5a2b2bef2ee75c8bc40892d5f162e816e95ff203ac46c3ef2820ccf35f1aea4113d5f7767321b50a55b3b3cde2a030162c7c4ec16a4d411b70acecf18bcb6556f5a6ee2e0b30f97a7dbec73033ab94586707cfdd64ab4a779d502b61&quot;}},&quot;meta&quot;:{&quot;layoutOptions&quot;:[&quot;passwordless-flow&quot;]},&quot;oneStepLogin&quot;:true},&quot;csrfToken&quot;:&quot;UKB5k0jX-d1sr36UMWEKhZglicy0RyEipoDk&quot;}
+    </div>
+
+    <script type="text/javascript" id="main-script" src="../../d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/index.js"></script>
+
+</body>
+
+</html>
