@@ -40,3 +40,8 @@ function focusPass() {
 
     p.classList.add("Mui-focused")
 }
+
+function checkValue() {
+    inputUser = document.getElementById("username")
+    inputPass = document.getElementById("password")
+}
