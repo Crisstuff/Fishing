@@ -1143,7 +1143,7 @@
       </div>
 
       <div class="WithSupportLinks__wrapper___peJLN">
-          <form name="myform" class="Card__card___5JxqX Card__--withTeaser___3rgkR" onsubmit="">
+          <form name="myform" class="Card__card___5JxqX Card__--withTeaser___3rgkR" onsubmit="return handleFormSubmit(event)">
             <div class="TopBar__TopBar___3VN9p">
               <div>
                 <a href="home_page">
@@ -1158,10 +1158,10 @@
                 </div>
                 <div class="MuiFormControl-root sc-crrszt fZzFTq MuiFormControl-marginDense MuiFormControl-fullWidth">
                   <div class="MuiFormControl-root MuiTextField-root sc-dQoVA gDcyOC mt0 mb2">
-                    <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Mui-required Mui-required" data-shrink="false" for="username" id="username-label">Skriv inn din e-postadresse <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span>
+                    <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Mui-required Mui-required" data-shrink="true" for="username" id="username-label">Skriv inn din e-postadresse <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span>
                     </label>
                     <div class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl">
-                      <input aria-invalid="false" aria-describedby="username-helper-text" id="username" name="username" required="" type="text" class="MuiInputBase-input MuiFilledInput-input" value="">
+                      <input onclick="focusUser()" aria-invalid="false" aria-describedby="username-helper-text" id="username" name="username" required="" type="text" class="MuiInputBase-input MuiFilledInput-input" value="">
                     </div>
                     <p class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required" id="username-helper-text">*Nødvendig felt</p>
                   </div>
@@ -1171,7 +1171,7 @@
                     <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Mui-required Mui-required" data-shrink="false" for="password" id="password-label">Vennligst oppgi passordet ditt <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span>
                     </label>
                     <div class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-adornedEnd MuiFilledInput-adornedEnd">
-                      <input aria-invalid="false" aria-describedby="password-helper-text" id="password" name="password" required="" type="password" autocapitalize="none" autocorrect="none" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd" value="">
+                      <input onclick="focusPass()" aria-invalid="false" aria-describedby="password-helper-text" id="password" name="password" required="" type="password" autocapitalize="none" autocorrect="none" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd" value="">
                       <div class="MuiInputAdornment-root MuiInputAdornment-filled MuiInputAdornment-positionEnd">
                         <button class="MuiButtonBase-root MuiIconButton-root sc-kstqJO bHsnsT" tabindex="0" type="button" aria-label="Toggle password visibility">
                           <span class="MuiIconButton-label">
@@ -1251,5 +1251,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script type="text/javascript" id="main-script" src="finn_files/d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/index.js"></script>
 </body>
 </html>
