@@ -1,63 +1,58 @@
-const http = require("http")
-const fs = require("fs")
-const path = require("path")
-const port = 8080
+import http from "http";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { insertCred } from "./database";
 
-const server = http.createServer(function(req, res) {
-    let filePath = path.join(__dirname, "public", req.url === "/" ? "index.html" : req.url)
+const port = 8080;
 
-    let extName = path.extname(filePath)
-    let contentType = "text/html"
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const server = http.createServer((req, res) => {
+    let filePath = path.join(
+        __dirname,
+        "public",
+        req.url === "/" ? "index.html" : req.url
+    );
+
+    let extName = path.extname(filePath);
+    let contentType = "text/html";
 
     switch (extName) {
         case ".css":
-            contentType = "text/css"
-            break
+            contentType = "text/css";
+            break;
         case ".js":
-            contentType = "text/javascript"
-            break
+            contentType = "text/javascript";
+            break;
         case ".png":
-            contentType = "image/png"
-            break
+            contentType = "image/png";
+            break;
         case ".woff":
-            contentType = "font/woff"
-            break
+            contentType = "font/woff";
+            break;
         case ".woff2":
-            contentType = "font/woff2"
-            break
+            contentType = "font/woff2";
+            break;
         case ".ttf":
-            contentType = "font/ttf"
-            break
+            contentType = "font/ttf";
+            break;
     }
 
-    console.log(`File path: ${filePath}`)
-    console.log(`Content type: ${contentType}`)
+    console.log(`File path: ${filePath}`);
+    console.log(`Content type: ${contentType}`);
 
-    res.writeHead(200, { "content-type": contentType })
+    res.writeHead(200, { "Content-Type": contentType });
 
-    const readStream = fs.createReadStream(filePath)
-    readStream.pipe(res)
-})
+    const readStream = fs.createReadStream(filePath);
+    readStream.pipe(res);
+});
 
-server.listen(port, function(err) {
+server.listen(port, (err) => {
     if (err) {
-        console.log(`oopsie: ${err}`)
+        console.log(`oopsie: ${err}`);
     } else {
-        console.log(`Listening on port ${port}!`)
+        console.log(`Listening on port ${port}!`);
     }
-})
-
-
-
-
-
-// res.writeHead(200, { "content-type": "text/html" })
-// fs.readFile("index.html", function(e, data) {
-//     if (e) {
-//         res.write(404)
-//         res.write("ERROR")
-//     } else {
-//         res.write(data)
-//     }
-//     res.end()
-// })
+});
