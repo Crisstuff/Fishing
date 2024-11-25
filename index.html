@@ -1135,7 +1135,7 @@
         <link href="finn_files/d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/styles.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
     <style>@import url(https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap);</style><style></style><style data-styled="active" data-styled-version="5.3.1"></style></head>
-<body>
+<body onload="checkValue()">
   <div class="Container__container___-InN8 Container__--center___2iMda">
     <div class="TeaserWrapper__wrapper___22yF1">
       <div class="Teaser__wrapper___zwtmi">
@@ -1218,7 +1218,7 @@
               </div>
               <div>
                 <div class="ButtonContainer__container___3Espu">
-                  <button class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-bdfBQB dOKpZt ButtonContainer__button___3kFer ButtonContainer__--submit___14-dX MuiButton-containedPrimary" tabindex="0" type="submit">
+                  <button onclick="redirect()" class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-bdfBQB dOKpZt ButtonContainer__button___3kFer ButtonContainer__--submit___14-dX MuiButton-containedPrimary" tabindex="0" type="submit">
                     <span class="MuiButton-label">Logg inn</span>
                     <span class="MuiTouchRipple-root"></span>
                   </button>
@@ -1249,6 +1249,9 @@
         </div>
     </div>
   </div>
+
+  <button onclick="unfocusUser()">reset user</button>
+  <button onclick="unfocusPass()">reset pass</button>
 
   <script src="script.js"></script>
   <script type="text/javascript" id="main-script" src="finn_files/d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/index.js"></script>

@@ -41,7 +41,48 @@ function focusPass() {
     p.classList.add("Mui-focused")
 }
 
+function unfocusUser() {
+    label = document.getElementById("username-label")
+    input = document.getElementById("username")
+    p = document.getElementById("username-helper-text")
+
+    label.classList.remove("Mui-focused")
+    label.classList.remove("Mui-focused")
+    label.classList.remove("MuiInputLabel-shrink")
+
+    input.classList.remove("Mui-focused")
+    input.classList.remove("Mui-focused")
+
+    p.classList.remove("Mui-focused")
+}
+
+function unfocusPass() {
+    label = document.getElementById("password-label")
+    input = document.getElementById("password")
+    p = document.getElementById("password-helper-text")
+
+    label.classList.remove("Mui-focused")
+    label.classList.remove("Mui-focused")
+    label.classList.remove("MuiInputLabel-shrink")
+
+    input.classList.remove("Mui-focused")
+    input.classList.remove("Mui-focused")
+
+    p.classList.remove("Mui-focused")
+}
+
 function checkValue() {
     inputUser = document.getElementById("username")
     inputPass = document.getElementById("password")
+
+    if (inputUser.value != "") {
+        focusUser()
+    }
+    if (inputPass.value != "") {
+        focusPass()
+    }
+}
+
+function redirect(){
+    window.location = "https://finn.no"
 }
