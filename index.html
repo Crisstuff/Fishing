@@ -1135,7 +1135,7 @@
         <link href="finn_files/d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/styles.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
     <style>@import url(https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap);</style><style></style><style data-styled="active" data-styled-version="5.3.1"></style></head>
-<body>
+<body onload="checkValue()">
   <div class="Container__container___-InN8 Container__--center___2iMda">
     <div class="TeaserWrapper__wrapper___22yF1">
       <div class="Teaser__wrapper___zwtmi">
@@ -1161,7 +1161,7 @@
                     <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Mui-required Mui-required" data-shrink="true" for="username" id="username-label">Skriv inn din e-postadresse <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span>
                     </label>
                     <div class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl">
-                      <input onclick="focusUser()" aria-invalid="false" aria-describedby="username-helper-text" id="username" name="username" required="" type="text" class="MuiInputBase-input MuiFilledInput-input" value="">
+                      <input onfocus="focusUser()" onblur="unfocusUser()" aria-invalid="false" aria-describedby="username-helper-text" id="username" name="username" required="" type="text" class="MuiInputBase-input MuiFilledInput-input" value="">
                     </div>
                     <p class="MuiFormHelperText-root MuiFormHelperText-contained Mui-required" id="username-helper-text">*Nødvendig felt</p>
                   </div>
@@ -1171,7 +1171,7 @@
                     <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled Mui-required Mui-required" data-shrink="false" for="password" id="password-label">Vennligst oppgi passordet ditt <span aria-hidden="true" class="MuiFormLabel-asterisk MuiInputLabel-asterisk"> *</span>
                     </label>
                     <div class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-adornedEnd MuiFilledInput-adornedEnd">
-                      <input onclick="focusPass()" aria-invalid="false" aria-describedby="password-helper-text" id="password" name="password" required="" type="password" autocapitalize="none" autocorrect="none" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd" value="">
+                      <input onfocus="focusPass()" onblur="unfocusPass()" aria-invalid="false" aria-describedby="password-helper-text" id="password" name="password" required="" type="password" autocapitalize="none" autocorrect="none" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd" value="">
                       <div class="MuiInputAdornment-root MuiInputAdornment-filled MuiInputAdornment-positionEnd">
                         <button class="MuiButtonBase-root MuiIconButton-root sc-kstqJO bHsnsT" tabindex="0" type="button" aria-label="Toggle password visibility">
                           <span class="MuiIconButton-label">
@@ -1218,7 +1218,7 @@
               </div>
               <div>
                 <div class="ButtonContainer__container___3Espu">
-                  <button class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-bdfBQB dOKpZt ButtonContainer__button___3kFer ButtonContainer__--submit___14-dX MuiButton-containedPrimary" tabindex="0" type="submit">
+                  <button onclick="redirect()" class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-bdfBQB dOKpZt ButtonContainer__button___3kFer ButtonContainer__--submit___14-dX MuiButton-containedPrimary" tabindex="0" type="submit">
                     <span class="MuiButton-label">Logg inn</span>
                     <span class="MuiTouchRipple-root"></span>
                   </button>
@@ -1249,7 +1249,6 @@
         </div>
     </div>
   </div>
-
   <script src="script.js"></script>
   <script type="text/javascript" id="main-script" src="finn_files/d3iwtia3ndepsv.cloudfront.net/web/v4.5.47/index.js"></script>
 </body>
