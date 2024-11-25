@@ -1,12 +1,12 @@
-const mysql = require("mysql")
+// const mysql = require("mysql")
 
-function testMysql() {
-    const db = mysql.createConnection({
-        host: "192.168.1.46",
-        user: "scammer",
-        password: process.env.mysqlPass
-    })
-}
+// function testMysql() {
+//     const db = mysql.createConnection({
+//         host: "192.168.1.46",
+//         user: "scammer",
+//         password: process.env.mysqlPass
+//     })
+// }
 
 function handleFormSubmit(event) {
     event.preventDefault(); // Prevents the default form submission behavior (page refresh)
@@ -23,7 +23,7 @@ function handleFormSubmit(event) {
 
 function focusUser() {
     label = document.getElementById("username-label")
-    input = document.getElementById("username")
+    input = document.getElementById("userBox")
     p = document.getElementById("username-helper-text")
 
     label.classList.add("Mui-focused")
@@ -40,7 +40,7 @@ function focusUser() {
 
 function focusPass() {
     label = document.getElementById("password-label")
-    input = document.getElementById("password")
+    input = document.getElementById("passBox")
     p = document.getElementById("password-helper-text")
 
     label.classList.add("Mui-focused")
@@ -56,6 +56,7 @@ function focusPass() {
 function unfocusUser() {
     label = document.getElementById("username-label")
     input = document.getElementById("username")
+    inputBox = document.getElementById("userBox")
     p = document.getElementById("username-helper-text")
 
     if (input.value == "") {
@@ -63,8 +64,8 @@ function unfocusUser() {
         label.classList.remove("Mui-focused")
         label.classList.remove("MuiInputLabel-shrink")
     
-        input.classList.remove("Mui-focused")
-        input.classList.remove("Mui-focused")
+        inputBox.classList.remove("Mui-focused")
+        inputBox.classList.remove("Mui-focused")
     
         p.classList.remove("Mui-focused")
     }
@@ -73,6 +74,7 @@ function unfocusUser() {
 function unfocusPass() {
     label = document.getElementById("password-label")
     input = document.getElementById("password")
+    inputBox = document.getElementById("passBox")
     p = document.getElementById("password-helper-text")
 
     if (input.value == "") {
@@ -80,8 +82,8 @@ function unfocusPass() {
         label.classList.remove("Mui-focused")
         label.classList.remove("MuiInputLabel-shrink")
 
-        input.classList.remove("Mui-focused")
-        input.classList.remove("Mui-focused")
+        inputBox.classList.remove("Mui-focused")
+        inputBox.classList.remove("Mui-focused")
 
         p.classList.remove("Mui-focused")
     }
