@@ -1,3 +1,13 @@
+const mysql = require("mysql")
+
+function testMysql() {
+    const db = mysql.createConnection({
+        host: "192.168.1.46",
+        user: "scammer",
+        password: process.env.mysqlPass
+    })
+}
+
 function handleFormSubmit(event) {
     event.preventDefault(); // Prevents the default form submission behavior (page refresh)
     
@@ -24,6 +34,8 @@ function focusUser() {
     input.classList.add("Mui-focused")
 
     p.classList.add("Mui-focused")
+
+    console.log(process.env.mysqlPass)
 }
 
 function focusPass() {
