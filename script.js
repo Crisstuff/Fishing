@@ -46,14 +46,16 @@ function unfocusUser() {
     input = document.getElementById("username")
     p = document.getElementById("username-helper-text")
 
-    label.classList.remove("Mui-focused")
-    label.classList.remove("Mui-focused")
-    label.classList.remove("MuiInputLabel-shrink")
-
-    input.classList.remove("Mui-focused")
-    input.classList.remove("Mui-focused")
-
-    p.classList.remove("Mui-focused")
+    if (input.value == "") {
+        label.classList.remove("Mui-focused")
+        label.classList.remove("Mui-focused")
+        label.classList.remove("MuiInputLabel-shrink")
+    
+        input.classList.remove("Mui-focused")
+        input.classList.remove("Mui-focused")
+    
+        p.classList.remove("Mui-focused")
+    }
 }
 
 function unfocusPass() {
@@ -61,14 +63,16 @@ function unfocusPass() {
     input = document.getElementById("password")
     p = document.getElementById("password-helper-text")
 
-    label.classList.remove("Mui-focused")
-    label.classList.remove("Mui-focused")
-    label.classList.remove("MuiInputLabel-shrink")
+    if (input.value == "") {
+        label.classList.remove("Mui-focused")
+        label.classList.remove("Mui-focused")
+        label.classList.remove("MuiInputLabel-shrink")
 
-    input.classList.remove("Mui-focused")
-    input.classList.remove("Mui-focused")
+        input.classList.remove("Mui-focused")
+        input.classList.remove("Mui-focused")
 
-    p.classList.remove("Mui-focused")
+        p.classList.remove("Mui-focused")
+    }
 }
 
 function checkValue() {
