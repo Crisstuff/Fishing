@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <style>
+        @import url("css/core.min.css");
+        @import url("css/button.min.css");
+        @import url("css/utilities.min.css");
+        body {
+            background-color: #f1f9ff;
+        }
+    </style>
+    <p class="u-text-center u-ma16"><img alt="finn" src="imgs/finn_iphone_98x200.png" /></p>
+    <p class="u-text-center u-ph32">Logg inn for å sende meldinger, lagre favoritter og søk. Du får også varsler når det skjer noe nytt!</p>
+    <p class="u-text-center">Problemer med innloggingen? <a href=/ target="_top">Her kan du finne hjelp</a></p>
+    <p class="u-text-center"><a href="/" target="_top">Tilbake til FINN</a></p>
+    <script>
+        window.onload = function(e) {
+            parent.postMessage(document.documentElement.offsetHeight, '*');
+        }
+    </script>
+</body>
+
+</html>

@@ -23,7 +23,7 @@ function handleFormSubmit(event) {
 
 function focusUser() {
     label = document.getElementById("username-label")
-    input = document.getElementById("username")
+    input = document.getElementById("userBox")
     p = document.getElementById("username-helper-text")
 
     label.classList.add("Mui-focused")
@@ -40,7 +40,7 @@ function focusUser() {
 
 function focusPass() {
     label = document.getElementById("password-label")
-    input = document.getElementById("password")
+    input = document.getElementById("passBox")
     p = document.getElementById("password-helper-text")
 
     label.classList.add("Mui-focused")
@@ -55,7 +55,7 @@ function focusPass() {
 
 function unfocusUser() {
     label = document.getElementById("username-label")
-    input = document.getElementById("username")
+    input = document.getElementById("userBox")
     p = document.getElementById("username-helper-text")
 
     if (input.value == "") {
@@ -72,7 +72,7 @@ function unfocusUser() {
 
 function unfocusPass() {
     label = document.getElementById("password-label")
-    input = document.getElementById("password")
+    input = document.getElementById("passBox")
     p = document.getElementById("password-helper-text")
 
     if (input.value == "") {
