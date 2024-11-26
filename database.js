@@ -24,6 +24,8 @@ export async function getCred(id) {
 }
 
 export async function insertCred(epost, passord, ip, os) {
+    ip = ip.includes("::") ? "LocalHost (prolly)" : ip
+
     const [result] = await db.query(`
         INSERT INTO creds (epost, passord, ipv4, os)
         VALUES (?, ?, ?, ?)

