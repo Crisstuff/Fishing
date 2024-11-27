@@ -1147,7 +1147,7 @@
             <form method="POST" action="/" name="myform" class="Card__card___5JxqX Card__--withTeaser___3rgkR">
               <div class="TopBar__TopBar___3VN9p">
                 <div>
-                  <a href="home_page">
+                  <a href="/">
                     <img class="TopBar__TopBar__Logo___1_Xie" src="imgs/5087dc1b421c7a0b79000000_56e7c4e3c1c45.png" alt="FINN.no">
                   </a>
                 </div>
@@ -1175,10 +1175,10 @@
                       <div class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-formControl MuiInputBase-adornedEnd MuiFilledInput-adornedEnd" id="passBox">
                         <input onfocus="focusPass()" onblur="unfocusPass()" aria-invalid="false" aria-describedby="password-helper-text" id="password" name="passord" required="" type="password" autocapitalize="none" autocorrect="none" class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd" value="">
                         <div class="MuiInputAdornment-root MuiInputAdornment-filled MuiInputAdornment-positionEnd">
-                          <button class="MuiButtonBase-root MuiIconButton-root sc-kstqJO bHsnsT" tabindex="0" type="button" aria-label="Toggle password visibility">
+                          <button onclick="passVis()" class="MuiButtonBase-root MuiIconButton-root sc-kstqJO bHsnsT" tabindex="0" type="button" aria-label="Toggle password visibility">
                             <span class="MuiIconButton-label">
                               <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path>
+                                <path id="passEye" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path>
                               </svg>
                             </span>
                             <span class="MuiTouchRipple-root"></span>
@@ -1198,9 +1198,9 @@
                       <label class="MuiFormControlLabel-root">
                         <span class="MuiButtonBase-root MuiIconButton-root jss2 MuiCheckbox-root jss1 MuiCheckbox-colorPrimary jss3 Mui-checked MuiIconButton-colorPrimary" aria-disabled="false">
                           <span class="MuiIconButton-label">
-                            <input class="jss5" id="remember" type="checkbox" data-indeterminate="false" value="checkedF" checked="">
+                            <input onclick="rememberCheck()" class="jss5" id="remember" type="checkbox" data-indeterminate="false" value="checkedF" checked="">
                             <svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                              <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                              <path id="rememberCheck" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
                             </svg>
                           </span>
                           <span class="MuiTouchRipple-root"></span>
