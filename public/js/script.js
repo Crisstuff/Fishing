@@ -111,11 +111,6 @@ function passVis() {
 
 function rememberCheck() {
     const checkbox = document.getElementById("rememberCheck")
-    const ripple = document.getElementById("MuiTouchRipple-root")
-    const span1 = document.createElement("span")
-    const span2 = document.createElement("span")
-
-    span1.classList.add("MuiTouchRipple-ripple")
 
     if (checkbox.getAttribute("d") == "M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z") {
         checkbox.setAttribute("d", "M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z")
@@ -123,8 +118,3 @@ function rememberCheck() {
         checkbox.setAttribute("d", "M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z")
     }
 }
-
-<span class="MuiTouchRipple-root">
-    <span class="MuiTouchRipple-ripple MuiTouchRipple-rippleVisible" style="width: 50.0469px; height: 50.0469px; top: -0.0234375px; left: -0.0234375px;"></span>
-    <span class="MuiTouchRipple-child MuiTouchRipple-childLeaving"></span>
-</span>
